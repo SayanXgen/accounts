@@ -1,0 +1,59 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-row class="ion-align-items-center">
+      <ion-col Size="5">
+        <ion-button fill="clear" color="light" (click)="back()" >
+         <ion-icon name="arrow-back-outline"></ion-icon>
+        
+       </ion-button>
+      </ion-col>
+      <ion-col Size="7" class="ion-text-end" (click)="billList()">
+        <ion-label color="light">List of Sales Bill</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-margin-top">
+    <ion-col Size="12"> <ion-title align="middle" class="ion-no-padding" color="primary">SALES BILL</ion-title></ion-col>
+    <ion-col size="12" class="ion-text-center option">
+      <ion-img src="assets/images/bill.png"></ion-img>
+    </ion-col>
+    
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11">
+      <ion-input label="Bill Number" label-placement="floating" fill="outline" placeholder="Enter"></ion-input>
+    </ion-col>
+    <ion-col size="11">
+      <ion-input label="Bill Date" label-placement="floating" fill="outline" value="{{ date | date: 'dd.MM.yyyy' }}"
+        id="date" placeholder="Enter"></ion-input>
+      <ion-popover trigger="date" size="cover">
+        <ng-template>
+          <ion-datetime [showDefaultButtons]="true" presentation="date" [(ngModel)]="date" locale="sl-SI"></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-col>
+    <ion-col size="11">
+      <ion-input label="Bill To" label-placement="floating" fill="outline" placeholder="Enter"></ion-input>
+    </ion-col>
+    <ion-col size="11">
+      <ion-input label="Bill Description" label-placement="floating" fill="outline" placeholder="Enter"></ion-input>
+    </ion-col>
+    <ion-col size="11">
+      <ion-input label="Bill Amount" label-placement="floating" fill="outline" placeholder="Enter"></ion-input>
+    </ion-col>
+    <ion-col size="11" class="ion-text-center upload" >
+      <ion-button fill="clear"><ion-img src="assets/images/upload.png"></ion-img></ion-button> <br>
+      <ion-label color="primary"><b>Upload Bill</b></ion-label> 
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-row>
+    <ion-col size="12">
+      <ion-button shape="round" expand="full" color="primary" [routerLink]="['/select-company']">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

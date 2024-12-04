@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay"></div>
+  <ion-img src="assets/images/home.jpeg"></ion-img>
+
+  <div class="signInForm">
+    <ion-title color="primary" align="middle"><b>Sign In</b></ion-title>
+    <ion-row class="ion-margin-top">
+      <ion-col size="12">
+        <ion-input label="Username or Enter Email" label-placement="floating" fill="outline"
+          placeholder="Enter Username or Email" color="primary"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-input label="Password" label-placement="floating" fill="outline" placeholder="Enter Password or Email"
+          color="primary"></ion-input>
+      </ion-col>
+      <ion-col size="12" class="ion-margin-top">
+        <ion-button shape="round" expand="full" color="primary" [routerLink]="['/select-company']">Sign In</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

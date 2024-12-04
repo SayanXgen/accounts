@@ -1,0 +1,35 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-row class="ion-align-items-center">
+      <ion-col Size="3"> 
+        <ion-button fill="clear" color="light" (click)="back()" >
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col Size="6"> <ion-title align="middle" class="ion-no-padding" color="light">VOUCHER</ion-title></ion-col>
+      <ion-col Size="3" class="ion-text-end" (click)="otherList()">
+        <ion-label color="light">Other List</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <!-- <div size="12" class="ion-text-center option">
+      <ion-img src="assets/images/bill.png"></ion-img>
+    </div> -->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="11" class="ion-text-center upload" >
+      <ion-button fill="clear"><ion-img src="assets/images/upload.png"></ion-img></ion-button> <br>
+      <ion-label color="primary"><b>Upload Voucher</b></ion-label> 
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-row>
+    <ion-col size="12">
+      <ion-button shape="round" expand="full" color="primary" [routerLink]="['/select-company']">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,40 @@
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ion-color-primary);
+}
+
+.tableHead {
+    background: var(--ion-color-primary);
+    ion-col {
+        color: #fff;
+        border-right: 1px solid #fff;
+        font-size: 14px;
+    }
+}
+.tableBody {
+    background: #ededed;
+    ion-col {
+        border-right: 1px solid #fff;
+        font-size: 14px;
+    }
+}
+.statusDone {
+    background: var(--ion-color-success);
+    color: #fff;
+    display: none;
+}
+.statusPending {
+    background: var(--ion-color-danger);
+    color: #fff;
+    display: none;
+}
+
+.statusDone.show {
+    display: block;
+    text-align: center;
+}
+.statusPending.show {
+    display: block;
+    text-align: center;
+}

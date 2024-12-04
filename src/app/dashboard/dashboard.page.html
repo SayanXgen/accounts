@@ -1,0 +1,47 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-row>
+      <ion-col size="2">
+        <ion-menu-button></ion-menu-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-title align="middle">DASHBOARD</ion-title>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-margin-top ion-padding-top">
+    <ion-col size="4" class="ion-text-center option" (click)=" openCamera()">
+      <div>
+        <ion-img src="assets/images/camera.png"></ion-img>
+        <ion-label color="primary">Camera</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="ion-text-center option ">
+      <div>
+        <ion-img src="assets/images/image-upload.png"></ion-img>
+        <ion-label color="primary">Image</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="ion-text-center option " (click)="voiceModal()">
+      <div>
+        <ion-img src="assets/images/microphone.png"></ion-img>
+        <ion-label color="primary">Voice</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-row>
+    <ion-col size="6">
+      <ion-button shape="round" expand="full" color="medium" [routerLink]="['/billing-list']">History</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button shape="round" expand="full" color="primary" [routerLink]="['/other-list']">Processed</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

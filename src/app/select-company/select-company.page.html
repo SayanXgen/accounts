@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="overlay"></div>
+  <ion-img src="assets/images/home.jpeg"></ion-img>
+
+  <div class="signInForm">
+    <ion-title color="primary" align="middle"><b>Select Comapany</b></ion-title>
+    <ion-row class="ion-margin-top">
+      <ion-col size="12">
+        <ion-list>
+          <ion-radio-group >
+            <ion-item *ngFor="let food of foods;">
+              <ion-radio [value]="food">{{ food.name }}</ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+
+      <ion-col size="12" class="ion-margin-top">
+        <ion-button shape="round" expand="full" color="primary"  [routerLink]="['/dashboard']">Proceed</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
