@@ -7,6 +7,8 @@ import { MenuController, NavController } from '@ionic/angular';
   styleUrls: ['./edit-profile.page.scss'],
 })
 export class EditProfilePage implements OnInit {
+  inputType: string = 'password';
+  password: string = 'ihsbdii';
   constructor(
     private menuController: MenuController,
     private navCtrl: NavController,
@@ -18,7 +20,9 @@ export class EditProfilePage implements OnInit {
   ) {
   }
 
-
+  toggleInputType() {
+    this.inputType = this.inputType === 'password' ? 'text' : 'password';
+  }
 
   closeProfile() {
 

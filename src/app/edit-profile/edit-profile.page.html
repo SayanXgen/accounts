@@ -40,8 +40,8 @@
     </ion-item>
     <ion-item >
       <ion-icon name="lock-closed" slot="start"></ion-icon>
-      <ion-input placeholder="Enter New Password" value="12131664" type="password"></ion-input>
-      <ion-icon name="eye" slot="end"></ion-icon>
+      <ion-input placeholder="Enter New Password" readonly [type]="inputType" [(ngModel)]="password"></ion-input>
+      <ion-icon [name]="inputType === 'password' ? 'eye' : 'eye-off'" slot="end" (click)="toggleInputType()"></ion-icon>
     </ion-item>
     <ion-item >
       <ion-icon name="lock-closed" slot="start"></ion-icon>
@@ -54,7 +54,7 @@
     </ion-item>
   </ion-list>
 </ion-content>
-<ion-footer>
+<ion-footer class="ion-no-border">
   <ion-row>
     <ion-col size="12">
       <ion-button shape="round" expand="full" color="primary" (click)="closeProfile()">Save</ion-button>

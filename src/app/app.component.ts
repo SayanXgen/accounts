@@ -6,6 +6,8 @@ import { MenuController, NavController } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  inputType: string = 'password'
+  password: string = 'cCas'
   public appPages = [
     // { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
     // { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
@@ -19,6 +21,9 @@ export class AppComponent {
     private menuController: MenuController,
     private navCtrl: NavController
   ) {}
+  toggleInputType() {
+    this.inputType = this.inputType === 'password' ? 'text' : 'password';
+  }
 
   editProfile() {
     

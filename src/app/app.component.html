@@ -34,8 +34,8 @@
           </ion-item>
           <ion-item >
             <ion-icon name="lock-closed" slot="start"></ion-icon>
-            <ion-input placeholder="sayan.com" value="1234567890" type="password"></ion-input>
-            <ion-icon name="eye" slot="end"></ion-icon>
+            <ion-input placeholder="sayan.com" readonly  [type]="inputType" [value]="password"></ion-input>
+            <ion-icon [name]="inputType === 'password' ? 'eye' : 'eye-off' " slot="end" (click)=" toggleInputType() "></ion-icon>
           </ion-item>
         </ion-list>
       </ion-content>
