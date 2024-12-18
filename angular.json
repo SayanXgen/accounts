@@ -44,11 +44,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-<<<<<<< HEAD
                   "maximumWarning": "5kb",
-=======
-                  "maximumWarning": "4kb",
->>>>>>> refs/remotes/origin/main
                   "maximumError": "4kb"
                 }
               ],

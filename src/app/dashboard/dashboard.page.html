@@ -14,22 +14,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-row class="ion-margin-top ion-padding-top">
+  <ion-row class="ion-margin-top ">
     <ion-col size="4" class="ion-text-center option" (click)=" openCamera()">
       <div>
-        <ion-img src="assets/images/camera.png"></ion-img>
+        <ion-img name="image" src="assets/images/camera.png"></ion-img>
         <ion-label color="primary">Camera</ion-label>
       </div>
     </ion-col>
-    <ion-col size="4" class="ion-text-center option ">
+    <ion-col size="4" class="ion-text-center option " (click)=" openGallery()">
       <div>
-        <ion-img src="assets/images/image-upload.png"></ion-img>
+        <ion-img name="image" src="assets/images/image-upload.png"></ion-img>
         <ion-label color="primary">Image</ion-label>
       </div>
     </ion-col>
     <ion-col size="4" class="ion-text-center option " (click)="voiceModal()">
       <div>
-        <ion-img src="assets/images/microphone.png"></ion-img>
+        <ion-img name="image" src="assets/images/mic.png"></ion-img>
         <ion-label color="primary">Voice</ion-label>
       </div>
     </ion-col>
@@ -38,7 +38,7 @@
 <ion-footer class="ion-no-border">
   <ion-row>
     <ion-col size="6">
-      <ion-button shape="round" expand="full" color="medium" [routerLink]="['/billing-list']">History</ion-button>
+      <ion-button shape="round" expand="full" color="secondary" [routerLink]="['/billing-list']">History</ion-button>
     </ion-col>
     <ion-col size="6">
       <ion-button shape="round" expand="full" color="primary" [routerLink]="['/other-list']">Processed</ion-button>

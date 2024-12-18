@@ -17,8 +17,8 @@
 <ion-content>
   <ion-row class="profileName ion-margin-top" >
     <ion-col size="12" class="ion-text-center">
-      <ion-img class="profileImg" src="assets/images/demo.jpg"></ion-img>
-      <ion-button color="primary" fill="clear" size="small">Edit Photo</ion-button>
+      <ion-img class="profileImg" [src]="profileImage" alt="Profile Image"></ion-img>
+      <ion-button color="primary" fill="clear" size="small" (click)="changeProfileImage()">Edit Photo</ion-button>
       <ion-label><h1>Name Surname</h1></ion-label>
      
     </ion-col>

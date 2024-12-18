@@ -2,17 +2,17 @@
   <ion-toolbar color="primary">
     <ion-row class="ion-align-items-center">
       <ion-col size="2">
-        <ion-button fill="clear" color="light"  (click)="back()" >
+        <ion-button fill="clear" color="light" (click)="back()">
           <ion-icon name="arrow-back-outline"></ion-icon>
-         
+
         </ion-button>
       </ion-col>
       <ion-col size="8">
         <ion-title align="middle">OTHER</ion-title>
       </ion-col>
     </ion-row>
-   
- 
+
+
   </ion-toolbar>
 </ion-header>
 
@@ -27,33 +27,44 @@
   </ion-row>
   <ion-row>
     <ion-col size="12">
-      <ion-row class="tableHead">
-        <ion-col size="5">Bill No and Date</ion-col>
-        <ion-col size="2">Amt</ion-col>
-        <ion-col size="2">Type</ion-col>
-        <ion-col size="2">Status</ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row class="tableBody">
-        <ion-col size="5">B001 04/12/2025</ion-col>
-        <ion-col size="2">12500</ion-col>
-        <ion-col size="2">Voucher</ion-col>
-        <ion-col size="2">
-          <ion-label class="statusDone show">Done</ion-label>
-          <ion-label class="statusPending">Pending</ion-label>
-        </ion-col>
-        <ion-col><ion-icon name="eye-outline"></ion-icon></ion-col>
-      </ion-row>
-      <ion-row class="tableBody">
-        <ion-col size="5">B001 04/12/2025</ion-col>
-        <ion-col size="2">12500</ion-col>
-        <ion-col size="2">Voucher</ion-col>
-        <ion-col size="2">
-          <ion-label class="statusDone ">Done</ion-label>
-          <ion-label class="statusPending show">Pending</ion-label>
-        </ion-col>
-        <ion-col><ion-icon name="eye-outline"></ion-icon></ion-col>
-      </ion-row>
+      <table class="table ">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Bill No & Date</th>
+            <th scope="col">Amt</th>
+            <th scope="col">Type</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td> B0001 <br> 22/12/2024 </td>
+            <td>12000</td>
+            <td>Voucher</td>
+            <td class="statusDone show">Done</td>
+            <td class="text-center"><ion-icon name="eye" color="primary"></ion-icon></td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td> B0001 <br> 22/12/2024 </td>
+            <td>12000</td>
+            <td>Voucher</td>
+            <td class="statusPending show">Pending</td>
+            <td class="text-center"><ion-icon name="eye" color="primary"></ion-icon></td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td> B0001 <br> 22/12/2024 </td>
+            <td>12000</td>
+            <td>Voucher</td>
+            <td class="statusDone show">Done</td>
+            <td class="text-center"><ion-icon name="eye" color="primary"></ion-icon></td>
+          </tr>
+        </tbody>
+      </table>
     </ion-col>
   </ion-row>
 </ion-content>

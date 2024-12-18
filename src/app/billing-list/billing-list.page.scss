@@ -4,24 +4,25 @@ h2 {
     color: var(--ion-color-primary);
 }
 
-.tableHead {
-    background: var(--ion-color-primary);
-    ion-col {
-        color: #fff;
-        border-right: 1px solid #fff;
+th,
+td {
+    color: var(--ion-color-primary);
+    font-size: 12px;
+}
+
+td {
+    font-weight: 600;
+    ion-icon {
+        font-size: 20px;
     }
 }
-.tableBody {
-    background: #ededed;
-    ion-col {
-        border-right: 1px solid #fff;
-    }
-}
+
 .statusDone {
     background: var(--ion-color-success);
     color: #fff;
     display: none;
 }
+
 .statusPending {
     background: var(--ion-color-danger);
     color: #fff;
@@ -32,6 +33,7 @@ h2 {
     display: block;
     text-align: center;
 }
+
 .statusPending.show {
     display: block;
     text-align: center;

@@ -6,6 +6,9 @@ ion-img {
 
 ion-content {
     position: relative;
+    &::after {
+        display: none;
+    }
 
     .overlay {
         content: "";
